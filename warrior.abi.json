@@ -1,0 +1,78 @@
+{
+	"ABI version": 2,
+	"version": "2.1",
+	"header": ["time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+				{"name":"_stationAdress","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "dieFromBaseStation",
+			"inputs": [
+				{"name":"_address","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "attack",
+			"inputs": [
+				{"name":"object","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getPower",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value0","type":"uint8"}
+			]
+		},
+		{
+			"name": "takeTheAttack",
+			"inputs": [
+				{"name":"_power","type":"uint8"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getDefence",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value0","type":"uint8"}
+			]
+		},
+		{
+			"name": "lives",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"lives","type":"uint8"}
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"name":"lives","type":"uint8"},
+		{"name":"defence","type":"uint8"},
+		{"name":"baseStation","type":"address"},
+		{"name":"power","type":"uint8"},
+		{"name":"objectType","type":"string"},
+		{"name":"id","type":"uint8"}
+	]
+}
