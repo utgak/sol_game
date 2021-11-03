@@ -6,7 +6,7 @@ import 'baseSatationInterface.sol';
 
 contract WarUnit is GameObject {
     address baseStation;
-    uint8 power;
+    int8 power;
 
     function dieFromBaseStation(address _address) public {
         tvm.accept();
@@ -19,7 +19,7 @@ contract WarUnit is GameObject {
         object.takeTheAttack(power);
     }
 
-    function getPower() public view returns (uint8) {
+    function getPower() public view returns (int8) {
         tvm.accept();
         return power;
     }

@@ -43,7 +43,7 @@ contract BaseStation is GameObject, BaceStationInterface {
         selfdestruct(_enemyAddress);
     }
 
-    function getLives() public view returns (uint8) {
+    function getLives() public view returns (int8) {
         tvm.accept();
         return lives;
     }

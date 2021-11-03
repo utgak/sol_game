@@ -32,13 +32,13 @@
 			"inputs": [
 			],
 			"outputs": [
-				{"name":"value0","type":"uint8"}
+				{"name":"value0","type":"int8"}
 			]
 		},
 		{
 			"name": "takeTheAttack",
 			"inputs": [
-				{"name":"_power","type":"uint8"}
+				{"name":"_power","type":"int8"}
 			],
 			"outputs": [
 			]
@@ -48,7 +48,7 @@
 			"inputs": [
 			],
 			"outputs": [
-				{"name":"value0","type":"uint8"}
+				{"name":"value0","type":"int8"}
 			]
 		},
 		{
@@ -56,7 +56,7 @@
 			"inputs": [
 			],
 			"outputs": [
-				{"name":"lives","type":"uint8"}
+				{"name":"lives","type":"int8"}
 			]
 		}
 	],
@@ -68,10 +68,10 @@
 		{"name":"_pubkey","type":"uint256"},
 		{"name":"_timestamp","type":"uint64"},
 		{"name":"_constructorFlag","type":"bool"},
-		{"name":"lives","type":"uint8"},
-		{"name":"defence","type":"uint8"},
+		{"name":"lives","type":"int8"},
+		{"name":"defence","type":"int8"},
 		{"name":"baseStation","type":"address"},
-		{"name":"power","type":"uint8"},
+		{"name":"power","type":"int8"},
 		{"name":"objectType","type":"string"},
 		{"name":"id","type":"uint8"}
 	]

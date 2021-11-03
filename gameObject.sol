@@ -3,8 +3,8 @@ pragma AbiHeader expire;
 import 'gameObjectInterface.sol';
 
 contract GameObject is GameObjectInterface {
-    uint8 public lives;
-    uint8 defence;
+    int8 public lives;
+    int8 defence;
 
     modifier onlyOwner {
         require(msg.pubkey() == tvm.pubkey(), 1337);
@@ -13,17 +13,21 @@ contract GameObject is GameObjectInterface {
 	}
 
 
-    function takeTheAttack(uint8 _power) external override virtual {
+    function takeTheAttack(int8 _power) external override {
         tvm.accept();
 
-        lives = lives - (defence - _power);
+        int8 damage = _power - defence;
+
+        if (damage > 0) {
+            lives = lives - (damage);
+        }
 
         if (checkForDeath()) {
             die(msg.sender);
         }
     }
 
-    function getDefence() public returns (uint8) {
+    function getDefence() public returns (int8) {
         tvm.accept();
         return defence;
     }
