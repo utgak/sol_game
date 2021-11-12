@@ -1,0 +1,70 @@
+{
+	"ABI version": 2,
+	"version": "2.1",
+	"header": ["time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+				{"name":"pubkey","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "createPurchase",
+			"inputs": [
+				{"name":"name","type":"string"},
+				{"name":"amount","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "completeAPurchase",
+			"inputs": [
+				{"name":"id","type":"uint256"},
+				{"name":"price","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "deletePurchase",
+			"inputs": [
+				{"name":"id","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getPurchases",
+			"inputs": [
+			],
+			"outputs": [
+				{"components":[{"name":"id","type":"uint256"},{"name":"name","type":"string"},{"name":"createdAt","type":"uint32"},{"name":"amount","type":"uint256"},{"name":"isCompleted","type":"bool"},{"name":"totalPrice","type":"uint256"}],"name":"_purchases","type":"tuple[]"}
+			]
+		},
+		{
+			"name": "summary",
+			"inputs": [
+			],
+			"outputs": [
+				{"components":[{"name":"numberOfCompletedPurchases","type":"uint256"},{"name":"numberOfIncompletedPurchases","type":"uint256"},{"name":"totalPrice","type":"uint256"}],"name":"summary","type":"tuple"}
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"name":"m_ownerPubkey","type":"uint256"},
+		{"name":"count","type":"uint256"},
+		{"components":[{"name":"numberOfCompletedPurchases","type":"uint256"},{"name":"numberOfIncompletedPurchases","type":"uint256"},{"name":"totalPrice","type":"uint256"}],"name":"summary","type":"tuple"},
+		{"components":[{"name":"id","type":"uint256"},{"name":"name","type":"string"},{"name":"createdAt","type":"uint32"},{"name":"amount","type":"uint256"},{"name":"isCompleted","type":"bool"},{"name":"totalPrice","type":"uint256"}],"name":"purchases","type":"map(uint256,tuple)"}
+	]
+}
